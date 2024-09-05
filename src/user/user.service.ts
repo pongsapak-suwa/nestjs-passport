@@ -9,7 +9,7 @@ import { RegisterDTO } from './dto/register.dto';
 export class UserService {
   constructor(
     @InjectModel(User.name) private readonly userModel: Model<UserDocument>,
-  ) {} 
+  ) {}
 
   async create(registerDTO: RegisterDTO): Promise<User> {
     const newUser = new this.userModel(registerDTO);
